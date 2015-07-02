@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="231.99997792968497" prefWidth="368.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.usp.icmc.onlinemarketclient.LoginController">
+  <children>
+    <Label alignment="CENTER" graphicTextGap="6.0" prefHeight="32.0" prefWidth="354.0" text="Please, sign in." textAlignment="CENTER" VBox.vgrow="ALWAYS">
+      <font>
+        <Font size="42.0" />
+      </font>
+      <VBox.margin>
+        <Insets bottom="25.0" left="8.0" right="8.0" top="20.0" />
+      </VBox.margin>
+    </Label>
+    <HBox prefHeight="30.0" prefWidth="368.0">
+      <children>
+        <Separator prefHeight="22.0" prefWidth="35.0" visible="false" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="username" prefWidth="310.0" promptText="Username" HBox.hgrow="ALWAYS" />
+        <Separator prefHeight="22.0" prefWidth="35.0" visible="false" HBox.hgrow="ALWAYS" />
+      </children>
+      <VBox.margin>
+        <Insets />
+      </VBox.margin>
+    </HBox>
+    <HBox prefHeight="39.0" prefWidth="367.9999000000025">
+      <children>
+        <Separator prefHeight="22.0" prefWidth="31.0" visible="false" HBox.hgrow="ALWAYS" />
+        <PasswordField fx:id="password" prefHeight="22.0" prefWidth="305.9998779296875" promptText="Password" HBox.hgrow="ALWAYS" />
+        <Separator prefHeight="22.0" prefWidth="29.999900000002526" visible="false" HBox.hgrow="ALWAYS" />
+      </children>
+    </HBox>
+    <HBox prefHeight="28.999908447265625" prefWidth="368.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label prefHeight="22.0" prefWidth="33.0" text="Port:">
+          <HBox.margin>
+            <Insets left="25.0" />
+          </HBox.margin>
+        </Label>
+        <TextField id="username" fx:id="port" prefHeight="22.0" prefWidth="86.0" promptText="" text="5050" HBox.hgrow="ALWAYS">
+          <HBox.margin>
+            <Insets right="15.0" />
+          </HBox.margin>
+        </TextField>
+        <Label prefHeight="22.0" prefWidth="23.0" text="IP:" HBox.hgrow="ALWAYS">
+          <HBox.margin>
+            <Insets left="25.0" />
+          </HBox.margin>
+        </Label>
+        <TextField id="username" fx:id="ip" prefHeight="22.0" prefWidth="136.0" promptText="" text="localhost"
+                   HBox.hgrow="ALWAYS">
+          <HBox.margin>
+            <Insets right="31.0" />
+          </HBox.margin>
+        </TextField>
+      </children>
+      <VBox.margin>
+        <Insets left="10.0" />
+      </VBox.margin>
+    </HBox>
+    <HBox alignment="BOTTOM_CENTER" prefHeight="64.0" prefWidth="368.0000999999975" VBox.vgrow="ALWAYS">
+      <children>
+        <Separator prefWidth="200.0" visible="false" HBox.hgrow="ALWAYS" />
+        <Button id="logIn" fx:id="signUp" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#signUp" prefHeight="30.0" prefWidth="82.0" text="Sign Up" HBox.hgrow="ALWAYS">
+          <HBox.margin>
+            <Insets bottom="7.0" right="8.0" />
+          </HBox.margin>
+        </Button>
+        <Button fx:id="logIn" alignment="CENTER" cancelButton="false" contentDisplay="CENTER" mnemonicParsing="false"
+                onAction="#logIn" prefHeight="30.0" prefWidth="82.0" text="Log In" HBox.hgrow="ALWAYS">
+          <HBox.margin>
+            <Insets bottom="7.0" right="15.0" />
+          </HBox.margin>
+        </Button>
+      </children>
+    </HBox>
+  </children>
+</VBox>

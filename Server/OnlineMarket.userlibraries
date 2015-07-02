@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="lib">
+    <archive path="/home/roberto/documents/USP/Programação/Java/OnlineMarket/lib/javax.mail.jar" />
+    <archive path="/home/roberto/documents/USP/Programação/Java/OnlineMarket/lib/opencsv-3.3.jar" />
+  </library>
+</eclipse-userlibraries>
+

@@ -1,0 +1,85 @@
+Sign up:
+	sent:
+		<newuser|username|name|address|telephone|email|id|password|type>
+		newuser - command identifier
+		username -  username to be created
+		name  - name to be created
+		address - address then address
+		telephone - the telephone number, format XX XXXXXXXXX
+		email - the email, format test@test.com
+		password - the password
+		type:
+			customer - the user can only buy products.
+			provider - the user can only provide add products
+			customerAndProvider - the user can either buy or add products
+	received:
+		<boolean|message>
+		boolean - true if the operation was successful and false otherwise
+		message - error message
+
+Login:
+	sent: 
+		<login|user|password>
+		login - command identifier
+		user - your username
+		password - your password
+	received:
+		<token>
+		token - the session identifier to be used on all other operations
+
+Request:
+	sent:
+		<request|mode>
+		request - command identifier
+		mode:
+			available - request all available products
+			unavailable - request all unavailable products
+			all - request all products
+	received:
+		<id|name|price|bestBefore|provider|status|amount|id|name|...>
+		id - the product's id
+		name - the product's name
+		bestBefore - product is best to consume before this date
+		provider - name of the provider for that product
+		status - true if the product is available and false if not
+		amount - the amount of the same product that is available
+		... - repeats for every product matching the request
+
+Subscribe:
+	sent:
+		<subscribe|token|productId>
+		subscribe - command identifier
+		token - the session token to identify a user
+		productId - the ID of the product the user wants to be notified when is available
+	received:
+		<boolean>
+		boolean - true if the subscription was successful or false if the product is already available
+
+Buy a product:
+	sent:
+		<buy|token|productId|amount|productId|amount|...>
+		buy - command identifier
+		token - the session token to identify a user
+		productId - the id of the product to be bought
+		amount - the amount to be bought
+		... - repeats for every product to be bought
+	received:
+		<boolean|productId|productId|...>
+		boolean - true if the operation was successful and false otherwise
+		productId - the ID of the products that could not be bought
+		... - repeats for every product that was not bought
+
+Add a product:
+	sent:
+		<addProduct|token|id|name|price|bestBefore|amount|id|name>
+		addProduct - command identifier
+		token - the session token to identify a user
+		id - the id of the product to be added
+		name - name of the product
+		price - price of the product
+		bestBefore - the product is best to consume before this date
+		amount - the amount to be added
+	received:
+		<boolean|message>
+		boolean - true if the product was added and false if it was not
+		message - error message
